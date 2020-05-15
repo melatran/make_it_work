@@ -30,16 +30,38 @@ RSpec.describe "Project Show Page" do
     expect(page).to have_content(challenge.theme)
     expect(page).to have_content("Number of Contestants: 2")
   end
+
+  it "can disply average years of experience" do
+    challenge = Challenge.create(theme: "Disney", project_budget: "2000")
+    project1 = Project.create(name: "Mulan Warrior", material: "Silk", challenge_id: challenge.id)
+
+    moana = Contestant.create(name: "Moana", age: "18", hometown: "Athens", years_of_experience: "3")
+    ralphie = Contestant.create(name: "Ralphie", age: "34", hometown: "Brooklyn", years_of_experience: "10")
+
+    ContestantProject.create(contestant_id: moana.id, project_id: project1.id)
+    ContestantProject.create(contestant_id: ralphie.id, project_id: project1.id)
+
+    visit "/projects/#{project1.id}"
+
+    expect(page).to have_content("Average Contestant Experience: 6.5 years")
+  end
 end
 
 
 
-
-
-
-
+# User Story Extension 1 - Average years of experience for contestants by project
 # As a visitor,
-# When I visit a project's show page ("/projects/:id"),
+# When I visit a project's show page
+# I see the average years of experience for the contestants that worked on that project
+# (e.g.    Litfit
+#     Material: Lamp Shade
+#   Challenge Theme: Apartment Furnishings
+#   Number of Contestants: 3
+#Average Contestant Experience: 10.25 years)
+#
+
+# # As a visitor,
+# # When I visit a project's show page ("/projects/:id"),
 # I see that project's name and material
 # And I also see the theme of the challenge that this project belongs to.
 # (e.g.    Litfit

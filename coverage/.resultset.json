@@ -407,6 +407,21 @@
           null
         ]
       },
+      "/Users/melanietran/turing/Mod2/independent_challenges/make_it_work/app/controllers/contestants_controller.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/melanietran/turing/Mod2/independent_challenges/make_it_work/app/controllers/application_controller.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
       "/Users/melanietran/turing/Mod2/independent_challenges/make_it_work/app/controllers/projects_controller.rb": {
         "lines": [
           1,
@@ -419,14 +434,8 @@
           null,
           null
         ]
-      },
-      "/Users/melanietran/turing/Mod2/independent_challenges/make_it_work/app/controllers/application_controller.rb": {
-        "lines": [
-          1,
-          null
-        ]
       }
     },
-    "timestamp": 1589557268
+    "timestamp": 1589557659
   }
 }

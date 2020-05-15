@@ -45,8 +45,28 @@ RSpec.describe "Project Show Page" do
 
     expect(page).to have_content("Average Contestant Experience: 6.5 years")
   end
+
+  it "can add contestant with a form" do
+    challenge = Challenge.create(theme: "Disney", project_budget: "2000")
+    project1 = Project.create(name: "Mulan Warrior", material: "Silk", challenge_id: challenge.id)
+    
+    visit "/projects/#{project1.id}"
+    click_on "Add Contestant To Project"
+    expect(current_path).to eq("/projects/#{project1.id}/contestants/new")
+  end
 end
 
+# User Story Extension 2 - Adding a contestant to a project
+# ​
+# As a visitor,
+# When I visit a project's show page
+# I see a form to add a contestant to this project
+# When I fill out a field with an existing contestants id
+# And hit "Add Contestant To Project"
+# I'm taken back to the project's show page
+# And I see that the number of contestants has increased by 1
+# And when I visit the contestants index page
+# I see that project listed under that contestant's name
 
 
 # User Story Extension 1 - Average years of experience for contestants by project

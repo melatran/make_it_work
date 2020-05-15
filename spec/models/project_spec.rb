@@ -14,14 +14,25 @@ RSpec.describe Project, type: :model do
   end
 
   describe "methods" do
-    it "can .total_contestants" do
-    challenge = Challenge.create(theme: "Disney", project_budget: "2000")
-    project1 = Project.create(name: "Mulan Warrior", material: "Silk", challenge_id: challenge.id)
+    it ".total_contestants" do
+      challenge = Challenge.create(theme: "Disney", project_budget: "2000")
+      project1 = Project.create(name: "Mulan Warrior", material: "Silk", challenge_id: challenge.id)
 
-    moana = project1.contestants.create(name: "Moana", age: "18", hometown: "Athens", years_of_experience: "3")
-    ralphie = project1.contestants.create(name: "Ralphie", age: "34", hometown: "Brooklyn", years_of_experience: "10")
+      moana = project1.contestants.create(name: "Moana", age: "18", hometown: "Athens", years_of_experience: "3")
+      ralphie = project1.contestants.create(name: "Ralphie", age: "34", hometown: "Brooklyn", years_of_experience: "10")
 
-    expect(project1.total_contestants).to eq(2)
+      expect(project1.total_contestants).to eq(2)
     end
+
+    it ".average_years_experience" do
+      challenge = Challenge.create(theme: "Disney", project_budget: "2000")
+      project1 = Project.create(name: "Mulan Warrior", material: "Silk", challenge_id: challenge.id)
+
+      moana = project1.contestants.create(name: "Moana", age: "18", hometown: "Athens", years_of_experience: "3")
+      ralphie = project1.contestants.create(name: "Ralphie", age: "34", hometown: "Brooklyn", years_of_experience: "10")
+
+      expect(project1.average_years_experience).to eq(6.5)
+    end
+
   end
 end

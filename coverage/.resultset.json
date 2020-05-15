@@ -245,6 +245,9 @@
           1,
           1,
           1,
+          null,
+          1,
+          1,
           null
         ]
       },
@@ -269,18 +272,17 @@
           null,
           1,
           1,
-          0,
+          1,
           null,
-          0,
-          0,
-          0,
-          0,
+          1,
+          1,
+          1,
+          1,
           null,
-          0,
-          null,
-          0,
-          0,
-          0,
+          1,
+          1,
+          1,
+          1,
           null,
           null,
           null,
@@ -357,7 +359,7 @@
           null,
           1,
           1,
-          0,
+          1,
           null,
           null,
           null,
@@ -497,7 +499,7 @@
           1,
           null,
           1,
-          6,
+          7,
           null,
           null
         ]
@@ -542,13 +544,28 @@
           1,
           null,
           1,
-          6,
+          7,
           null,
           null
         ]
       },
       "/Users/melanietran/turing/Mod2/independent_challenges/make_it_work/app/controllers/contestants_controller.rb": {
         "lines": [
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          2,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
           1,
           1,
           1,
@@ -570,12 +587,12 @@
           null,
           null,
           1,
-          5,
+          6,
           null,
           null
         ]
       }
     },
-    "timestamp": 1589560275
+    "timestamp": 1589560870
   }
 }

@@ -19,9 +19,8 @@ RSpec.describe "User can add contestant to project" do
       fill_in :years_of_experience, with: "6"
 
       click_on "Submit"
-
+      save_and_open_page
       expect(current_path).to eq("/projects/#{project1.id}")
-      expect(page).to have_content("Pony")
       expect(page).to have_content("Number of Contestants: 3")
   end
 end

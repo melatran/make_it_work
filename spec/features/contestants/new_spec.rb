@@ -19,9 +19,34 @@ RSpec.describe "User can add contestant to project" do
       fill_in :years_of_experience, with: "6"
 
       click_on "Submit"
-      save_and_open_page
+
       expect(current_path).to eq("/projects/#{project1.id}")
       expect(page).to have_content("Number of Contestants: 3")
+  end
+
+  it "can update on contestant index page with new contest added" do
+
+    challenge = Challenge.create(theme: "Disney", project_budget: "2000")
+    project1 = Project.create(name: "Mulan Warrior", material: "Silk", challenge_id: challenge.id)
+    moana = Contestant.create(name: "Moana", age: "18", hometown: "Athens", years_of_experience: "3")
+    ralphie = Contestant.create(name: "Ralphie", age: "34", hometown: "Brooklyn", years_of_experience: "10")
+    ContestantProject.create(contestant_id: moana.id, project_id: project1.id)
+    ContestantProject.create(contestant_id: ralphie.id, project_id: project1.id)
+
+      visit "/projects/#{project1.id}"
+      click_on "Add Contestant To Project"
+      expect(current_path).to eq("/projects/#{project1.id}/contestants/new")
+
+      fill_in :name, with: "Pony"
+      fill_in :age, with: "25"
+      fill_in :hometown, with: "Seoul"
+      fill_in :years_of_experience, with: "6"
+
+      click_on "Submit"
+
+      visit '/contestants'
+
+      expect(page).to have_content("Pony")
   end
 end
 

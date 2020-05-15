@@ -2,9 +2,9 @@
 
 <% @contestants.each do |contestant| %>
 <section class="contestant-<%= contestant.id %>">
-  <%= contestant.name %>
+  <p><%= contestant.name %></p>
   <% contestant.projects.each do |project| %>
-    <%= project.name %>
+    <li><%= project.name %></li>
   <% end %>
 </section>
 <% end %>

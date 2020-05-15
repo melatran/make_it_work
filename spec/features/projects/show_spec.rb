@@ -7,7 +7,7 @@ RSpec.describe "Project Show Page" do
 
 
     visit "/projects/#{project1.id}"
-    save_and_open_page
+  
     expect(page).to have_content(project1.name)
     expect(page).to have_content(project1.material)
     expect(page).to have_content(challenge.theme)

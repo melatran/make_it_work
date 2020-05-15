@@ -244,12 +244,55 @@
           null,
           1,
           1,
+          1,
           null
         ]
       },
       "/Users/melanietran/turing/Mod2/independent_challenges/make_it_work/app/helpers/application_helper.rb": {
         "lines": [
           1,
+          null
+        ]
+      },
+      "/Users/melanietran/turing/Mod2/independent_challenges/make_it_work/spec/features/projects/show_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
           null
         ]
       },
@@ -384,6 +427,6 @@
         ]
       }
     },
-    "timestamp": 1589556641
+    "timestamp": 1589557268
   }
 }

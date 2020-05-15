@@ -242,6 +242,8 @@
         "lines": [
           1,
           null,
+          1,
+          1,
           null
         ]
       },
@@ -361,8 +363,27 @@
           1,
           null
         ]
+      },
+      "/Users/melanietran/turing/Mod2/independent_challenges/make_it_work/app/controllers/projects_controller.rb": {
+        "lines": [
+          1,
+          1,
+          0,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/melanietran/turing/Mod2/independent_challenges/make_it_work/app/controllers/application_controller.rb": {
+        "lines": [
+          1,
+          null
+        ]
       }
     },
-    "timestamp": 1589555412
+    "timestamp": 1589556641
   }
 }

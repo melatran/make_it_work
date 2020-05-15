@@ -49,7 +49,7 @@ RSpec.describe "Project Show Page" do
   it "can add contestant with a form" do
     challenge = Challenge.create(theme: "Disney", project_budget: "2000")
     project1 = Project.create(name: "Mulan Warrior", material: "Silk", challenge_id: challenge.id)
-    
+
     visit "/projects/#{project1.id}"
     click_on "Add Contestant To Project"
     expect(current_path).to eq("/projects/#{project1.id}/contestants/new")
@@ -97,3 +97,13 @@ end
 #     Material: Lamp Shade
 #   Challenge Theme: Apartment Furnishings
 #   Number of Contestants: 3 )
+
+# User Story 1 of 3
+# ​
+# As a visitor,
+# When I visit a project's show page ("/projects/:id"),
+# I see that project's name and material
+# And I also see the theme of the challenge that this project belongs to.
+# (e.g.    Litfit
+#     Material: Lamp Shade
+#   Challenge Theme: Apartment Furnishings)
